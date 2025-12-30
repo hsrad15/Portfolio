@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Portfolio Website</title>
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<link rel="stylesheet" href="port_style.css">
+</head>
+
+ <body class="h-full">
+
+  <div class="portfolio-wrapper h-full overflow-auto" id="portfolioWrapper"><!-- Animated Background -->
+   <div class="animated-bg" id="animatedBg">
+</div>
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#0a0e27]">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+<h1 id="navTitle" class="nav-logo">
+   Darshana 
+</h1>
+
+
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-6 text-white font-medium">
+      <a href="#home" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button id="menuBtn"
+      class="md:hidden text-white text-3xl focus:outline-none">
+ <i class="fa-solid fa-grip-lines"></i>
+
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+  class="fixed top-0 left-[-100%] w-full h-full
+         bg-black text-white
+         px-6 py-8
+         flex flex-col gap-6
+         transition-all duration-300
+         z-[9999] md:hidden">
+
+  <!-- Close Button -->
+  <button id="closeMenu"
+    class="self-end text-3xl text-white mb-6">
+    ✕
+  </button>
+
+   <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#contact" class="nav-link">Contact</a>
+ 
+</div>
+</nav>
+
+
+
+<!--  wallpaper top Section -->
+<section id="home" class="relative min-h-screen flex flex-col justify-center items-center text-center px-6"
+  style="background-image: url('bg.jpg'); background-size: cover; background-position: center;">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black opacity-40 -z-10"></div>
+
+  <h3 class="text-2xl md:text-3xl font-semibold text-white mb-3">
+    Hi, I'm Darshana Dalvi
+  </h3>
+
+  <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+    Tech Enthusiast & Learner
+  </h1>
+
+  <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+   
+  </p>
+
+  <!-- See My Journey Button -->
+  
+ <!-- Dialog Overlay -->
+
+<!-- Button -->
+  <button id="journey-button" class="px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-700 transition transform hover:scale-105 shadow-lg font-semibold">
+    About Me
+  </button>
+
+ <div id="dialog-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+
+  <div class="dialog-animation bg-gradient-to-br from-[#1f2933] to-[#111827]
+              rounded-3xl p-8 max-w-xl w-full relative shadow-2xl border border-white/10">
+
+    <!-- Close Button -->
+    <button id="close-dialog"
+      class="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center
+             bg-white/10 hover:bg-white/20 transition">
+      <span class="text-white text-2xl">×</span>
+    </button>
+
+    <!-- Header -->
+    <div class="flex items-center gap-4 mb-6">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white
+                  bg-gradient-to-tr from-indigo-500 to-purple-500 shadow-lg">
+         <img src="profile.jpeg" alt="Profile"
+         class="w-full h-full object-cover" />
+      </div>
+
+      <div>
+        <h2 class="font-extrabold text-2xl text-white tracking-wide">
+          About Me
+        </h2>
+        <p  class="text-sm text-indigo-300">
+          Fresher • Enthusiastic Learner • Problem Solver
+        </p>
+      </div>
+    </div>
+
+    <!-- Description -->
+  <p id="para1"    class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+
+      I am a motivated fresher with a strong interest in learning and building real-world solutions.
+      I enjoy exploring new technologies, improving my skills through practice, and working on
+      projects that help me understand how things work in a practical way.
+    </p>
+
+  <p id="para2"  class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+
+      I believe in continuous learning, adaptability, and teamwork. As a fresher, I am eager to
+      contribute, gain hands-on experience, and grow professionally while delivering my best effort.
+    </p>
+
+    <!-- Highlights -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+
+      <div class="bg-white/5 p-4 rounded-xl border border-white/10 hover:scale-[1.03] transition">
+        <h4 class="text-indigo-400 font-semibold mb-1">🌱 Learning Mindset</h4>
+   <p class="text-sm text-gray-300">
+
+          Curious, self-driven, and always open to learning new skills
+        </p>
+      </div>
+
+      <div class="bg-white/5 p-4 rounded-xl border border-white/10 hover:scale-[1.03] transition">
+        <h4 class="text-purple-400 font-semibold mb-1">🤝 Team & Growth</h4>
+        <p class="text-sm text-gray-300">
+          Comfortable working in teams and adapting to new environments
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="flex justify-between items-center pt-4 border-t border-white/10">
+      <span  class="text-sm text-gray-400">
+        Ready to learn • Ready to grow
+      </span>
+
+     <a href="https://www.linkedin.com/in/darshana-dalvi7895a6301/"
+   target="_blank"
+   class="px-5 py-2 rounded-full text-sm font-semibold
+          bg-gradient-to-r from-indigo-600 to-purple-600
+          hover:scale-105 transition text-white shadow-md">
+  Connect on LinkedIn 🔗
+</a>
+
+    </div>
+
+  </div>
+</div>
+
+
+  
+</section>
+ 
+
+
+
+
+
+
+
+<!-- Hero Section -->
+<header id="hero" class="min-h-screen flex items-center justify-center px-6 relative z-10">
+  <div class="text-center fade-in-up">
+<!-- Profile Image -->
+<div class="mb-8 flex justify-center">
+  <div class="w-72 h-72 rounded-full overflow-hidden shadow-lg cursor-pointer tracking-wide">
+    <img
+      id="profileImg"
+      src="profile.jpeg"
+      alt="Profile"
+      class="w-full h-full object-cover transition-transform duration-300"
+    />
+  </div>
+</div>
+
+
+
+    <!-- Status -->
+    <div class="mb-6">
+      <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold tracking-wide"
+            style="background: rgba(59,130,246,0.2); color:#3b82f6;">
+        ✨ Available for Work
+      </span>
+    </div>
+
+    <!-- Hero Title & Tagline -->
+    <h1 id="heroTitle" class="font-extrabold text-4xl md:text-5xl mb-4 leading-tight">
+      <!-- filled by JS -->
+    </h1>
+
+    <p id="heroTagline" class="opacity-90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+      <!-- filled by JS -->
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-4 justify-center mb-8">
+      <a href="#contact"
+         id="ctaButton"
+         class="inline-block px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-110 shadow-lg"
+         style="background:#7c3aed; color:white;">
+        Let's Work Together
+      </a>
+
+      <a href="#projects"
+         id="viewWorkButton"
+         class="inline-block px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-110 shadow-lg"
+         style="background: rgba(124,58,237,0.2); color:#7c3aed;">
+        View My Work
+      </a>
+    </div>
+
+    <!-- Social Icons -->
+   <div class="flex gap-8 justify-center items-center text-5xl">
+
+  <a href="https://www.linkedin.com/in/darshana-dalvi7895a6301/"
+     target="_blank"
+     class="transition-all duration-300 hover:scale-125 text-blue-600">
+    <i class="fab fa-linkedin text-4xl"></i>
+  </a>
+
+  <a href="https://github.com/hsrad15"
+     target="_blank"
+     class="transition-all duration-300 hover:scale-125 text-gray-800">
+    <i class="fab fa-github text-4xl"></i>
+  </a>
+
+</div>
+
+
+</header>
+
+<!-- Education Section (Vertical Cards) -->
+<section id="education" class="py-16">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-center text-black-600 mb-12">
+      🎓 Education
+    </h2>
+
+    <!-- Cards Wrapper -->
+    <div class="grid gap-6">
+
+      <!-- Degree Card -->
+      <div class="bg-white/20 border border-purple-300 backdrop-blur-xl rounded-xl p-6 transform transition-all duration-300 hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-purple-600">
+            Bachelor of Computer Science
+          </h3>
+        </div>
+        <p class="text-black text-sm">
+          Dr. BMN College of Science, Matunga (East) <br>
+          Affiliated with SNDT University
+        </p>
+        <p class="text-black/60 text-xs mt-2">2023 – 2026</p>
+      </div>
+
+      <!-- HSC Card -->
+      <div class="bg-white/20 border border-purple-300 backdrop-blur-xl rounded-xl p-6 transform transition-all duration-300 hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-purple-600">
+            HSC – Science
+          </h3>
+        </div>
+        <p class="text-black text-sm">
+          New Viva College of Commerce, Science & Arts, Virar (West)
+        </p>
+        <p class="text-black/60 text-xs mt-2">2020 – 2022</p>
+      </div>
+
+      <!-- SSC Card -->
+      <div class="bg-white/20 border border-purple-300 backdrop-blur-xl rounded-xl p-6 transform transition-all duration-300 hover:-translate-y-4 hover:scale-105 hover:shadow-2xl">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-purple-600">
+            SSC
+          </h3>
+        </div>
+        <p class="text-black text-sm">
+          Utkarsh Madhyamik Vidyalaya, Virar (West)
+        </p>
+        <p class="text-black/60 text-xs mt-2">2019 – 2020</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 id="skillsTitle" class="font-bold mb-12 text-center" style="font-size: 40px;"><i class='fas fa-laptop-code'></i>Technical Skill</h2>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">Node.js</span>
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">Python</span>
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">SQL</span>
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">MongoDB</span>
+ 
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">C#</span>
+
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold"> Express.js </span>
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold"> Firebase</span>
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">javascript</span>
+      <span class="skill-badge px-6 py-3 rounded-full font-semibold">HTML</span>
+     
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Projects Section -->
+   <section id="projects" class="py-20 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="font-bold mb-12 text-center" style="font-size: 40px;">Projects</h2>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
+      <div class="project-card rounded-2xl overflow-hidden shadow-lg">
+       <div class="h-48 flex items-center justify-center text-6xl">
+        <i class="fas fa-laptop-code text-6xl text-purple-500"></i>
+
+       </div>
+       <div class="p-6">
+        <h3 class="font-bold mb-2">Portfolio</h3>
+        <p class="mb-4">The portfolio includes a Hero banner, About section, Skills icons, Projects showcase, Contact links. I focused on building a clean, professional front-end that works seamlessly across desktop and mobile device</p>
+        <div class="flex gap-2 flex-wrap mb-3"><span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">HTML CSS JS</span> <span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">Email.js</span> <span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">Firebase</span>
+        <a href="https://my-portfolio-c0880.web.app
+" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">View  link →</a></div>
+       </div>
+      </div>
+      <div class="project-card rounded-2xl overflow-hidden shadow-lg">
+       <div class="h-48 flex items-center justify-center text-6xl">
+    <i class="fas fa-laptop-code text-6xl text-purple-500"></i>
+
+       </div>
+       <div class="p-6">
+        <h3 class="font-bold mb-2">Centralized Event Management</h3>
+        <p class="mb-4">The Centralized Event Management System is a digital platform designed to streamline planning, booking, organizing, and managing events from a single dashboard.
+It connects event organizers, vendors, clients, students, or participants in one unified system</p>
+        <div class="flex gap-2 flex-wrap mb-3"><span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">HTML CSS JS </span> <span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">Django</span> <span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">PostgreSQL</span>
+        </div>
+ </div>
+      </div>
+      <div class="project-card rounded-2xl overflow-hidden shadow-lg">
+       <div class="h-48 flex items-center justify-center text-6xl">
+      <i class="fas fa-laptop-code text-6xl text-purple-500"></i>
+
+       </div>
+       <div class="p-6">
+        <h3 class="font-bold mb-2">NGO & Volunteer Management System</h3>
+        <p class="mb-4">The project was developed as part of a hackathon to help NGOs streamline volunteer activities. The system allows volunteer registration, event scheduling, and attendance tracking. It features an intuitive user interface and a backend database to store and manage volunteer information effectively</p>
+        <div class="flex gap-2 flex-wrap mb-3"><span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">CSS HTML</span> <span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">PHP</span> <span class="inline-block px-2 py-1 rounded text-xs" style="background: rgba(100, 116, 139, 0.2);">JS</span>
+        </div><a href="https://hsrad15.github.io/h-05ngo/" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">View on GitHub →</a>
+       </div>
+      </div>
+     </div>
+
+
+
+
+
+
+
+ <!-- Experience Section (Internships & Hackathon) -->
+ <section id="experience" class="py-20 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="font-bold mb-12 text-center" style="font-size: 40px;">Experience</h2>
+     <div class="mb-12">
+     
+      <div class="space-y-6" id="experienceContainer">
+
+       <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex justify-between items-start mb-3">
+         <div>
+ <h3 class="text-2xl font-bold mb-6" style="font-size: 30px;">💼 Internship</h3>
+          <h4 class="text-xl font-bold mb-1">website Devlopment & Management Intern (ongoing)</h4>
+          <p class="opacity-80">Gurukul Chess Academy</p>
+         </div><span class="px-3 py-1 rounded-full text-sm" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">Dec 2025 - Feb 2025</span>
+        </div>
+        <p class="leading-relaxed">Worked on building live webiste fronted,backend and database optimization. Collaborated with the team to implement new features and improve system performance.</p>
+       </div>
+      
+  </div>
+     </div>
+
+
+
+</section>
+
+
+
+
+<section>
+<!-- Hackathon -->
+
+     
+  <div class="max-w-6xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6" style="font-size: 30px;">🏆 Hackathon Achievement</h3>
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+       <div class="flex items-start gap-4">
+        <div class="text-5xl">
+         🥇
+        </div>
+        <div class="flex-1">
+         <div class="flex justify-between items-start mb-3">
+          <div>
+           <h4 class="text-xl font-bold mb-1">Tech Hackathon 2023</h4>
+           <p class="opacity-80">Participant → <a href="https://drive.google.com/file/d/1EaduF_-MKVt4mpqANczB2jX4x8d7fDdx/view" target="_blank" class="inline-block px-4 py-2 mt-3 rounded-lg bg-purple-600 text-white text-sm font-semibold">View Certificate </a></p>
+          </div><span class="px-3 py-1 rounded-full text-sm" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">March 2 2025</span>
+         </div>
+         <p class="leading-relaxed mb-3">Built an innovative solution for NGO and Volunteer collabaration. Worked in a team of 3 to develop a full-stack application within 8 hours.</p>
+ 
+         <div class="flex gap-2 flex-wrap"><span class="px-3 py-1 rounded-full text-sm" style="background: rgba(100, 116, 139, 0.2);">HTML, CSS & Js</span> <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(100, 116, 139, 0.2);">MangoDB</span> <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(100, 116, 139, 0.2);">Node.js</span>
+        
+ </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+   </section>
+
+
+
+
+
+<!-- Certifications Section -->
+<section id="certifications" class="py-20 px-6 relative z-10">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-bold mb-12 text-center" style="font-size: 40px;">Certifications</h2>
+
+    <div class="grid md:grid-cols-2 gap-6" id="certificationsContainer">
+
+      <!-- Power BI Workshop -->
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📜</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-2">Power BI Workshop Certificate</h3>
+            <p class="opacity-80 mb-2">Workshop Training</p>
+            <p class="text-sm mb-3">Issued: 2024</p>
+            <a href="https://drive.google.com/file/d/1xS6ptGSbkM5-8p5dqmp3E7W67DMYjHuY/view" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold"
+               style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">
+              View Certificate →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python Programming - Great Learning -->
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📜</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-2">Python Programming</h3>
+            <p class="opacity-80 mb-2">Great Learning</p>
+            <p class="text-sm mb-3">Issued: May 2024</p>
+            <a href="https://drive.google.com/file/d/1DxY7w7WLxK9KdA_x9LszyOnulL5h-F3O/view" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold"
+               style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">
+              View Certificate →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maths for AI & Robotics -->
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📜</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-2">Maths for AI and Robotics</h3>
+            <p class="opacity-80 mb-2">MTTF Participation Certificate</p>
+            <p class="text-sm mb-3">Participation Certificate</p>
+            <a href="https://drive.google.com/file/d/1bHv0XWDex5eygGiSsSpXIJIIf9lQ9FNl/view" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold"
+               style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">
+              View Certificate →
+            </a>
+          </div>
+        </div>
+      </div>
+
+   
+
+      <!-- Skill Enhancement Certificate -->
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📜</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-2">Skill Enhancement Certificate</h3>
+            <p class="opacity-80 mb-2">Unnati – Dr. BMN College of Home Science</p>
+            <p class="text-sm mb-3">Issued: 2024</p>
+            <a href="https://drive.google.com/file/d/1EZc4r-KREj76Cq5yMMiuuDZMH9TguzG0/view" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold"
+               style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">
+              View Certificate →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Firebase Certification -->
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📜</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-2">Firebase Certification</h3>
+            <p class="opacity-80 mb-2">Coursera</p>
+            <p class="opacity-80 mb-2">Cursa Online Course</p>
+            <p class="text-sm mb-3">Status: Ongoing</p>
+            <a href="#" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold"
+               style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">
+              In Progress →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Express.js Ongoing -->
+      <div class="project-card rounded-2xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📜</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-2">Express.js Certification</h3>
+            <p class="opacity-80 mb-2">Cursa Online Course</p>
+            <p class="text-sm mb-3">Status: Ongoing</p>
+            <a href="#" class="inline-block px-4 py-2 rounded-lg text-sm font-semibold"
+               style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">
+              In Progress →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="achievements"  class="py-20 px-6 relative z-10 bg-transparent">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-bold mb-12 text-center text-4xl flex items-center justify-center gap-4">
+  <i class="fa-solid fa-star text-yellow-400"></i>
+  Achievements & Extracurriculars
+  <i class="fa-solid fa-star text-yellow-400"></i>
+</h2>
+
+
+    <div class="space-y-6">
+
+      <!-- National Quiz -->
+      <div class="project-card rounded-2xl p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+        <h3 class="font-bold text-xl mb-2">🏅 National-Level Mathematics Quiz</h3>
+        <p class="opacity-80 mb-2">
+          Participated in the National-Level Online Quiz Competition for Undergraduate Students
+          organized by Department of Mathematics in association with IQAC (2025–2026).
+          Scored <strong>22/30</strong> on <strong>22-12-2025</strong>.
+        </p>
+        <a href="https://drive.google.com/file/d/1aE1pnXMeMqVclsvxVOUAERj2Pg9PIaPb/view" target="_blank" class="inline-block px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-semibold">View Certificate →</a>
+      </div>
+
+      <!-- German Language -->
+      <div class="project-card rounded-2xl p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+        <h3 class="font-bold text-xl mb-2"> introduction and Basic German Language – 2 Credit Course (60 hrs)</h3>
+        <p class="opacity-80">
+          Dr. BMN College of Home Science (2023–2024)<br>
+          Semester 1 – Grade: <strong>A  <a href="https://drive.google.com/file/d/1EaYBFDOpD_4n8DUM2UOdOw4OzJYzgUio/view" target="_blank" class="inline-block px-4 py-2 mt-3 rounded-lg bg-purple-600 text-white text-sm font-semibold">View Certificate →</a></strong><br>
+          Semester 2 – Grade: <strong>B  <a href="https://drive.google.com/file/d/1EaYBFDOpD_4n8DUM2UOdOw4OzJYzgUio/view" target="_blank" class="inline-block px-4 py-2 mt-3 rounded-lg bg-purple-600 text-white text-sm font-semibold">View Certificate →</a></strong>
+        </p>
+       
+      </div>
+
+      <!-- Vedic Maths -->
+      <div class="project-card rounded-2xl p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+        <h3 class="font-bold text-xl mb-2">➗ Vedic Mathematics – 1 Credit Course</h3>
+        <p class="opacity-80">Completed at Dr. BMN College of Home Science. Grade: <strong></strong></p>
+        <a href="#" target="_blank" class="inline-block px-4 py-2 mt-3 rounded-lg bg-purple-600 text-white text-sm font-semibold">View Certificate →</a>
+      </div>
+
+   
+      <!-- Volunteering -->
+      <div class="project-card rounded-2xl p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-people-group text-indigo-600"></i>
+          Volunteering
+        </h3>
+        <ul class="list-none space-y-2 opacity-90">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-gamepad text-pink-600"></i>
+            Volunteer – Valorant Tournament (College Fest 2024)
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-handshake-angle text-green-600"></i>
+            Volunteer – National Service Scheme
+          </li>
+        </ul>
+      </div>
+
+      <!-- Leadership Roles -->
+      <div class="project-card rounded-2xl p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+          🧭 Leadership Roles
+        </h3>
+        <div class="space-y-6">
+          <div class="border-l-4 border-indigo-600 pl-4">
+            <h4 class="text-lg font-semibold text-gray-900">
+              Sub-In-Charge – TekTales (2025)
+            </h4>
+            <p class="text-gray-500 text-sm">
+              Assisted in coordination, planning and execution of student-led technical event.
+            </p>
+          </div>
+          <div class="border-l-4 border-pink-600 pl-4">
+            <h4 class="text-lg font-semibold text-gray-900">
+              In-Charge – Mathematics Association (2025–2026)
+            </h4>
+            <p class="text-gray-600">
+              Dr. B.M.N. College of Home Science
+            </p>
+            <p class="text-gray-500 text-sm">
+              Coordinated academic events, managed student engagement and supported departmental activities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+  <section id="contact" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-purple-700 mb-6">Contact Me</h2>
+      <p class="text-gray-600 mb-8">Have a project? Let's build it.</p>
+
+      <form id="contactForm" class="grid gap-4 max-w-lg mx-auto">
+  <input id="name" class="p-3 border rounded-lg" type="text" placeholder="Your Name" required />
+  <input id="email" class="p-3 border rounded-lg" type="email" placeholder="Email Address" required />
+  <textarea id="message" class="p-3 border rounded-lg" rows="4" placeholder="Message" required></textarea>
+  <button type="submit"
+          class="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold">
+    Send Message
+  </button>
+</form>
+
+    </div>
+  </section>
+
+   
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-purple-700 text-white py-12 mt-20">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Brand / About -->
+    <div>
+      <h2 class="text-2xl font-bold mb-3">Darshana Dalvi</h2>
+      <p class="text-purple-100 text-sm leading-relaxed">
+       a strong desire to build a career in the IT field to pursue a challenging position in 
+Information Technology in a dynamic enviroment
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+     <ul class="space-y-2 text-purple-100">
+  <li><a href="#home" class="hover:text-white">Home</a></li>
+  <li><a href="#hero" class="hover:text-white">About Me</a></li>
+  <li><a href="#skills" class="hover:text-white">Skills</a></li>
+  <li><a href="#projects" class="hover:text-white">Projects</a></li>
+  <li><a href="#contact" class="hover:text-white">Contact</a></li>
+  <li><a href="#achievements" class="hover:text-white">Extracurricular</a></li>
+</ul>
+
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Contact</h3>
+     <ul class="flex gap-6 text-purple-200 text-xl">
+  <li>
+    <a href="tel:+911234567890"
+       class="hover:text-purple-400 transition"
+       aria-label="Phone">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="mailto:darshana.dev@gmail.com"
+       class="hover:text-purple-400 transition"
+       aria-label="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </li>
+</ul>
+
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-5">
+        <a href="https://www.linkedin.com/in/darshana-dalvi7895a6301/" class="hover:text-white">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/hsrad15" class="hover:text-white">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-purple-500 mt-10 pt-4 text-center text-sm text-purple-200">
+    © 2025 Darshana Dalvi. All rights reserved.
+  </div>
+</footer>
+
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+
+(function () {
+  emailjs.init("suxwuY11SZKJ5946q");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.send(
+    "service_clqkoog",
+    "template_onxpny6", // Contact Us template
+    {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    }
+  )
+  .then(() => {
+    alert(" Message sent successfully!");
+    this.reset();
+  })
+  .catch(error => {
+    alert("❌ Failed to send message");
+    console.error(error);
+  });
+});
+
+</script>
+
+
+
+<script src="P_script.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
